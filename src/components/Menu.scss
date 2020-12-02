@@ -1,0 +1,28 @@
+.menu {
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &-list {
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+  }
+
+  &-item {
+    margin-left: 40px;
+    text-decoration: none;
+  }
+
+  &-link {
+    color: #c2c2c2;
+    text-decoration: none;
+
+    &--active {
+      color: red;
+    }
+  }
+}
