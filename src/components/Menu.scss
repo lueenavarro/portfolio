@@ -51,7 +51,7 @@
     }
 
     &-hamburger {
-      padding: 20px;
+      padding: 20px 0 0 20px;
       font-size: 30px;
       cursor: pointer;
     }
@@ -61,7 +61,7 @@
       right: 0;
       padding: 20px;
       &::before {
-        content: "x"; // here is your X(cross) sign.
+        content: "x";
         font-size: x-large;
         cursor: pointer;
       }
