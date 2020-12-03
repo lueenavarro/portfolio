@@ -1,0 +1,121 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #120e0e;
+    animation: glow 1s infinite alternate;
+    padding: 60px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  &-item {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  &-link {
+    color: white;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  &-label {
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px 5px rgba($color: red, $alpha: 0.5);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgba($color: red, $alpha: 0.7);
+  }
+}
+
+.copy-icon {
+  opacity: 0.5;
+  margin-left: 15px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+
+.copied {
+  position: absolute;
+  background-color: #120e0e;
+  padding: 10px;
+  border-radius: 5px;
+  animation: appear 1s;
+  bottom: -80px;
+  opacity: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+.hvr-icon {
+  margin-right: 6px;
+  position: relative;
+  top: 3px;
+}
+
+.hvr-icon-up {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-icon-up .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.hvr-icon-up:hover .hvr-icon,
+.hvr-icon-up:focus .hvr-icon,
+.hvr-icon-up:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-up;
+  animation-name: hvr-icon-up;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@keyframes hvr-icon-up {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}

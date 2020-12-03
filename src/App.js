@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
-import SkillsList from "./components/SkillsList";
 import NotFound from "./components/NotFound";
+import SkillsList from "./components/SkillsList";
 
 import "./App.css";
 
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route path="/skills">
             <SkillsList />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/" exact={true}>
             <Home />

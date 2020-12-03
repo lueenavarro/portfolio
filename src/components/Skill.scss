@@ -10,12 +10,11 @@
   &:hover {
     .rating-bar {
       transform: scaleY(2) scaleX(1.08);
-      cursor: pointer;
     }
 
     .rating-label {
       display: block;
-      transform: scaleY(0.5);
+      transform: scaleY(0.5) scaleX(0.92);
     }
   }
 }
