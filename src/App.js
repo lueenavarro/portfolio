@@ -12,18 +12,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Menu className="menu" />
+        <Menu />
         <div className="container">
           <Switch>
-            <Route path="/skills">
-              <SkillsList />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/" exact={true}>
-              <Home />
-            </Route>
+            <Route path="/skills" component={SkillsList} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" component={Home} exact={true} />
             <Route component={NotFound} />
           </Switch>
         </div>
