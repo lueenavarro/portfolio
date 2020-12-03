@@ -1,9 +1,10 @@
 .App {
   height: 100vh;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu {
-  position: absolute;
-  right: 0;
+.container {
+  flex: 1;
 }

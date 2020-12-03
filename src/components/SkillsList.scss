@@ -1,10 +1,21 @@
 .skills {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-
+  align-items: flex-start;
+  margin-bottom: 50px;
   &-container {
-    column-count: 2;
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .skills {
+    align-items: center;
+    height: 100%;
+    margin: 0;
+
+    &-container {
+      column-count: 2;
+    }
   }
 }

@@ -2,11 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 
   &-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 30px;
   }
 }
 
@@ -20,7 +24,6 @@
 }
 
 .photo {
-  margin-left: 50px;
   position: relative;
 
   &-img {
@@ -53,11 +56,5 @@
     .photo-blindfold {
       transform: scaleX(0);
     }
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .container {
-    flex-direction: column;
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 
   &-container {
     display: flex;
@@ -10,8 +10,10 @@
     align-items: center;
     background-color: #120e0e;
     animation: glow 1s infinite alternate;
-    padding: 60px;
+    padding: 60px 0;
     border-radius: 5px;
+    width: 85%;
+    max-width: 400px;
     position: relative;
   }
 

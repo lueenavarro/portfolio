@@ -13,18 +13,20 @@ function App() {
     <Router>
       <div className="App">
         <Menu className="menu" />
-        <Switch>
-          <Route path="/skills">
-            <SkillsList />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/" exact={true}>
-            <Home />
-          </Route>
-          <Route component={NotFound} />
-        </Switch>
+        <div className="container">
+          <Switch>
+            <Route path="/skills">
+              <SkillsList />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/" exact={true}>
+              <Home />
+            </Route>
+            <Route component={NotFound} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
