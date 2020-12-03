@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #181818;

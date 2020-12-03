@@ -14,31 +14,42 @@ const Menu = () => {
   ];
 
   const menuClass = "menu " + (showMenu ? "" : "menu--hidden");
-  
+  const renderOverlay = () => {
+    if (showMenu) {
+      return (
+        <div className="menu-overlay" onClick={() => setShowMenu(false)}></div>
+      );
+    }
+  };
   return (
     <>
-      <div className="menu-hamburger" onClick={() => setShowMenu(true)}>
-        <FiMenu scale={10} />
+      <div className="menu-hamburger-container">
+        <FiMenu
+          className="menu-hamburger"
+          scale={10}
+          onClick={() => setShowMenu(true)}
+        />
       </div>
-      {showMenu ? <div className="menu-overlay" onClick={() => setShowMenu(false)}></div> : <></> }
-          <nav className={menuClass}>
-            <div className="menu-close" onClick={() => setShowMenu(false)}></div>
-            <ul className="menu-list">
-              {pages.map((page, index) => (
-                <li key={index} className="menu-item">
-                  <NavLink
-                    to={page.link}
-                    exact={true}
-                    className="menu-link"
-                    activeClassName="menu-link--active"
-                    onClick={() => setShowMenu(false)}
-                  >
-                    {page.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+
+      {renderOverlay()}
+      <nav className={menuClass}>
+        <div className="menu-close" onClick={() => setShowMenu(false)}></div>
+        <ul className="menu-list">
+          {pages.map((page, index) => (
+            <li key={index} className="menu-item">
+              <NavLink
+                to={page.link}
+                exact={true}
+                className="menu-link"
+                activeClassName="menu-link--active"
+                onClick={() => setShowMenu(false)}
+              >
+                {page.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 };
