@@ -4,7 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import "./Menu.scss";
 
 const Menu = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
   const pages = [
     { label: "Home", link: "/" },
     { label: "Skills", link: "/skills" },
@@ -13,27 +13,27 @@ const Menu = () => {
     { label: "Contact", link: "/contact" },
   ];
 
-  const menuClass = "menu " + (showMenu ? "" : "menu--hidden");
+  const menuClass = "menu" + (showSidebar ? " menu--show-sidebar" : "");
   const renderOverlay = () => {
-    if (showMenu) {
+    if (showSidebar) {
       return (
-        <div className="menu-overlay" onClick={() => setShowMenu(false)}></div>
+        <div className="menu-overlay" onClick={() => setShowSidebar(false)}></div>
       );
     }
   };
   return (
     <>
-      <div className="menu-hamburger-container">
+      <div className="menu-hamburger">
         <FiMenu
-          className="menu-hamburger"
+          className="menu-hamburger-icon"
           scale={10}
-          onClick={() => setShowMenu(true)}
+          onClick={() => setShowSidebar(true)}
         />
       </div>
 
       {renderOverlay()}
       <nav className={menuClass}>
-        <div className="menu-close" onClick={() => setShowMenu(false)}></div>
+        <div className="menu-close" onClick={() => setShowSidebar(false)}></div>
         <ul className="menu-list">
           {pages.map((page, index) => (
             <li key={index} className="menu-item">
@@ -42,7 +42,7 @@ const Menu = () => {
                 exact={true}
                 className="menu-link"
                 activeClassName="menu-link--active"
-                onClick={() => setShowMenu(false)}
+                onClick={() => setShowSidebar(false)}
               >
                 {page.label}
               </NavLink>
