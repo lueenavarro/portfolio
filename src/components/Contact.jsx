@@ -42,8 +42,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact wrapper">
+      
       <div className="contact-container">
+        <div className="contact-glow">       </div>
         {contactItem(
           mobile,
           `viber://chat?number=${encodeURI(mobile)}`,
@@ -57,6 +59,7 @@ const Contact = () => {
         <div>🇵🇭</div>
         <div className={copiedClass()}>copied!</div>
       </div>
+
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Typewriter from './Typewriter';
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home wrapper">
       <div className="home-container">
         <div className="bio">
           <Typewriter message="I'm Louie. I'm a developer." />

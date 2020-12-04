@@ -4,7 +4,7 @@ import "./SkillsList.scss"
 
 const SkillsList = () => {
   return (
-    <div className="skills">
+    <div className="skills wrapper">
       <div className="skills-container">
           <Skill skill="JavaScript" rating={5}/>
           <Skill skill="Angular" rating={5}/>
