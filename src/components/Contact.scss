@@ -4,13 +4,25 @@
     flex-direction: column;
     align-items: center;
     background-color: #120e0e;
-    animation: glow 1s infinite alternate;
     padding: 60px 0;
     border-radius: 5px;
     width: 85%;
     max-width: 400px;
     position: relative;
     flex-shrink: 0;
+  }
+
+  &-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: glow 1s infinite alternate;
+    transition: ease;
+    box-shadow: 0 0 10px 10px rgba($color: red, $alpha: 0.5);
+    border-radius: 5px;
+    z-index: -1;
   }
 
   &-item {
@@ -33,10 +45,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px 5px rgba($color: red, $alpha: 0.5);
+    transform: scale(0.97);
   }
   to {
-    box-shadow: 0 0 10px 10px rgba($color: red, $alpha: 0.7);
+    transform: scale(1);
   }
 }
 
@@ -53,7 +65,7 @@
   background-color: #120e0e;
   padding: 10px;
   border-radius: 5px;
-  animation: appear 1s;
+  animation: moveup 1s;
   bottom: -80px;
   opacity: 0;
 
@@ -62,7 +74,7 @@
   }
 }
 
-@keyframes appear {
+@keyframes moveup {
   0% {
     transform: translateY(0);
     opacity: 1;
