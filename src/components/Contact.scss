@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding: 80px 0;
+  min-height: 100%;
+  box-sizing: border-box;
 
   &-container {
     display: flex;
@@ -15,6 +17,7 @@
     width: 85%;
     max-width: 400px;
     position: relative;
+    flex-shrink: 0;
   }
 
   &-item {
