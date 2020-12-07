@@ -5,7 +5,7 @@ const Work = ({ screenshot, title, description, link }) => {
     const work = <div className="work">
       <img className="work-screenshot" src={screenshot} alt="" />
       <div className="work-overlay">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <span>{description}</span>
       </div>
     </div>
