@@ -9,7 +9,6 @@ const Menu = () => {
     { label: "Home", link: "/" },
     { label: "Skills", link: "/skills" },
     { label: "Works", link: "/works" },
-    { label: "Demos", link: "/demos" },
     { label: "Contact", link: "/contact" },
   ];
 
