@@ -6,7 +6,7 @@ const WorksList = () => {
   return (
     <div className="wrapper works">
       <div className="works-container">
-      <h3>Freelance</h3>
+      <h3 className="works-section-title">Freelance</h3>
       <div className="works-list">
         <Work
           screenshot="screenshots/esjs-hardware.jpg"
@@ -21,7 +21,7 @@ const WorksList = () => {
         />
       </div>
       <br/>
-      <h3>Playgrounds</h3>
+      <h3 className="works-section-title">Playgrounds</h3>
       <div className="works-list">
         <Work
           screenshot="screenshots/covid-ph-stats.jpg"

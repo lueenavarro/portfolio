@@ -1,8 +1,15 @@
 .works {
   justify-content: flex-start;
+
   &-container {
     width: 90%;
     margin: 0 auto;
+  }
+
+  &-section-title {
+    display: inline-block;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 3px;
   }
 
   &-list {
