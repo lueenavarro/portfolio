@@ -1,5 +1,6 @@
 .skills {
   &-container {
+    width: 90%;
     column-count: 1;
   }
 }
@@ -8,6 +9,7 @@
   .skills {
     &-container {
       column-count: 2;
+      max-width: 700px;
     }
   }
 }
