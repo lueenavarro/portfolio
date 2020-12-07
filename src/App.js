@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import NotFound from "./components/NotFound";
 import SkillsList from "./components/SkillsList";
-import Works from "./components/Works";
+import WorksList from "./components/WorksList";
 
 import "./App.scss";
 
@@ -17,7 +17,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/skills" component={SkillsList} />
-            <Route path="/works" component={Works} />
+            <Route path="/works" component={WorksList} />
             <Route path="/contact" component={Contact} />
             <Route path="/" component={Home} exact={true} />
             <Route component={NotFound} />

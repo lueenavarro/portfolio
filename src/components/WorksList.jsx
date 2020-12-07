@@ -1,23 +1,23 @@
 import React from "react";
 import Work from "./Work";
-import "./Works.scss";
+import "./WorksList.scss";
 
-const Works = () => {
+const WorksList = () => {
   return (
     <div className="wrapper works">
       <div className="works-container">
       <h3>Freelance</h3>
       <div className="works-list">
         <Work
+          screenshot="screenshots/esjs-hardware.jpg"
+          title="Edgar SJ Santos Hardware"
+          description="Sales and item tracker"
+        />
+        <Work
           screenshot="screenshots/precious-finds.jpg"
           title="Precious Finds"
           description="E-commerce site proof of concept"
           link="https://preciousfinds.netlify.app"
-        />
-        <Work
-          screenshot="screenshots/esjs-hardware.jpg"
-          title="Edgar SJ Santos Hardware"
-          description="Sales and item tracker"
         />
       </div>
       <br/>
@@ -35,4 +35,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default WorksList;
