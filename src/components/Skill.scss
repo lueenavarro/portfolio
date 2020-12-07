@@ -22,13 +22,13 @@
 .rating {
   width: 300px;
   height: 10px;
-  background-color: #120e0e;
+  background-color: var(--color-darker-primary);
   border-radius: 5px;
   margin-top: 5px;
 
   &-bar {
     height: 100%;
-    background-color: red;
+    background-color: var(--color-secondary);
     border-radius: 5px;
     animation: 1s expand-bar;
     transform-origin: left;
@@ -45,7 +45,10 @@
     font-size: 12px;
     display: none;
     color: white;
-    background-color: rgba($color: #120e0e, $alpha: 0.4);
+    background-color: rgba(
+      $color: var(--color-darker-primary-rgb),
+      $alpha: 0.4
+    );
     padding: 1px 5px;
     border-radius: 5px;
   }

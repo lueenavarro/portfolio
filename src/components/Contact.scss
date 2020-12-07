@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #120e0e;
+    background-color: var(--color-darker-primary);
     padding: 60px 0;
     border-radius: 5px;
     width: 85%;
@@ -20,7 +20,7 @@
     bottom: 0;
     animation: glow 1s infinite alternate;
     transition: ease;
-    box-shadow: 0 0 10px 10px rgba($color: red, $alpha: 0.5);
+    box-shadow: 0 0 10px 10px rgba(var(--color-secondary-rgb), 0.5);
     border-radius: 5px;
     z-index: -1;
   }
@@ -31,14 +31,14 @@
   }
 
   &-link {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     user-select: none;
   }
 
   &-label {
     &:hover {
-      color: red;
+      color: var(--color-secondary);
     }
   }
 }
@@ -62,7 +62,7 @@
 
 .copied {
   position: absolute;
-  background-color: #120e0e;
+  background-color: var(--color-darker-primary);
   padding: 10px;
   border-radius: 5px;
   animation: moveup 1s;
@@ -97,7 +97,7 @@
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px var(--color-darker-primary);
 }
 
 .hvr-icon-up .hvr-icon {

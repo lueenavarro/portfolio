@@ -2,14 +2,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #181818;
+  background-color: var(--color-primary);
 
   &-link {
-    color: #c2c2c2;
+    color: var(--color-text);
     text-decoration: none;
 
     &--active {
-      color: red;
+      color: var(--color-secondary);
     }
   }
 }
@@ -55,7 +55,7 @@
 
     &-hamburger {
       position: fixed;
-      background-color: #181818;
+      background-color: var(--color-primary);
       top: 0;
       left: 0;
       right: 0;
@@ -80,7 +80,7 @@
     }
 
     &-overlay {
-      background-color: black;
+      background-color: var(--color-darker-primary);
       opacity: 0.6;
       position: fixed;
       top: 0;
@@ -99,7 +99,7 @@
       margin-bottom: 30px;
 
       &:hover {
-        color: red;
+        color: var(--color-secondary);
         cursor: pointer;
       }
     }

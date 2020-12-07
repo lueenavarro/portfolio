@@ -5,8 +5,9 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import NotFound from "./components/NotFound";
 import SkillsList from "./components/SkillsList";
+import Works from "./components/Works";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/skills" component={SkillsList} />
+            <Route path="/works" component={Works} />
             <Route path="/contact" component={Contact} />
             <Route path="/" component={Home} exact={true} />
             <Route component={NotFound} />
