@@ -1,0 +1,136 @@
+.contact {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-darker-primary);
+    padding: 60px 0;
+    border-radius: 5px;
+    width: 85%;
+    max-width: 400px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: glow 1s infinite alternate;
+    transition: ease;
+    box-shadow: 0 0 10px 10px rgba(var(--color-secondary-rgb), 0.5);
+    border-radius: 5px;
+    z-index: -1;
+  }
+
+  &-item {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  &-link {
+    color: var(--color-text);
+    text-decoration: none;
+    user-select: none;
+  }
+
+  &-label {
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    transform: scale(0.97);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.copy-icon {
+  opacity: 0.5;
+  margin-left: 15px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+
+.copied {
+  position: absolute;
+  background-color: var(--color-darker-primary);
+  padding: 10px;
+  border-radius: 5px;
+  animation: moveup 1s;
+  bottom: -80px;
+  opacity: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@keyframes moveup {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+.hvr-icon {
+  margin-right: 6px;
+  position: relative;
+  top: 3px;
+}
+
+.hvr-icon-up {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px var(--color-darker-primary);
+}
+
+.hvr-icon-up .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.hvr-icon-up:hover .hvr-icon,
+.hvr-icon-up:focus .hvr-icon,
+.hvr-icon-up:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-up;
+  animation-name: hvr-icon-up;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@keyframes hvr-icon-up {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+.ph-flag {
+  margin-top: 5px;
+  width: 30px;
+}

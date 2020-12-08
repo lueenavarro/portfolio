@@ -1,0 +1,12 @@
+@function colorToRGB($color) {
+  @return red($color), green($color), blue($color);
+}
+
+:root {
+  --color-primary: #181818;
+  --color-secondary: red;
+  --color-secondary-rgb: #{colorToRGB(red)};
+  --color-darker-primary: #120e0e;
+  --color-darker-primary-rgb: #{colorToRGB(#120e0e)};
+  --color-text: #c2c2c2;
+}
