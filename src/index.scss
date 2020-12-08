@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@function colorToRGB($color) {
+  @return red($color), green($color), blue($color);
+}
+
+:root {
+  --color-primary: #181818;
+  --color-secondary: green;
+  --color-secondary-rgb: #{colorToRGB(green)};
+  --color-darker-primary: #120e0e;
+  --color-darker-primary-rgb: #{colorToRGB(#120e0e)};
+  --color-text: #c2c2c2;
+}

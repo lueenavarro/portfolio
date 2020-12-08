@@ -1,0 +1,28 @@
+.works {
+  justify-content: flex-start;
+
+  &-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &-section-title {
+    display: inline-block;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 3px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .works {
+    &-list {
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    }
+  }
+}
