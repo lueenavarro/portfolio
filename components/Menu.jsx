@@ -16,7 +16,11 @@ const Menu = () => {
 
   const menuClass = style.menu + (showSidebar ? ` ${style.menuShowSidebar}` : "");
   const menuLinkClass = (page) => {
-    return router.pathname === page.link ? style.menuLinkActive : style.menuLink;
+    const baseClass = style.menuLink
+    if(router.pathname === page.link) {
+      return baseClass + " " + style.menuLinkActive
+    }
+    return baseClass
   };
 
   const renderOverlay = () => {
