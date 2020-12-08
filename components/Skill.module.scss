@@ -30,7 +30,7 @@
     height: 100%;
     background-color: var(--color-secondary);
     border-radius: 5px;
-    animation: 1s expand-bar;
+    animation: expand-bar 1s;
     transform-origin: left;
     height: scaleY(1);
     transition: 0.1s;
