@@ -84,7 +84,7 @@ const WorksList = () => {
             <Loader />
           )}
         </div>
-        {showSlide ? <Slide images={slideShowImages} onClose={() => handleCloseSlide()} /> : <></>}
+        {showSlide && <Slide images={slideShowImages} onClose={() => handleCloseSlide()} />}
       </div>
     </Layout>
   );
