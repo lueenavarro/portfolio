@@ -72,11 +72,6 @@
       position: absolute;
       right: 0;
       padding: 20px;
-      &::before {
-        content: "x";
-        font-size: x-large;
-        cursor: pointer;
-      }
     }
 
     &-overlay {

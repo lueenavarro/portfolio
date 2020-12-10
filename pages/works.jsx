@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Loader from "../components/Loader";
+import Slide from "../components/Slide";
 import Work from "../components/Work";
 
 import styles from "./works.module.scss";
 
 const WorksList = () => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
+  const [slideShowImages, setSlideShowImages] = useState([]);
+  const [showSlide, setShowSlide] = useState(false);
   const images = [
     "/screenshots/esjs-hardware.jpg",
     "/screenshots/precious-finds.jpg",
@@ -28,6 +31,15 @@ const WorksList = () => {
       .catch((err) => console.log("Failed to load images", err));
   });
 
+  const handleOpenSlide = (images) => {
+    setSlideShowImages(images);
+    setShowSlide(true);
+  };
+
+  const handleCloseSlide = () => {
+    setShowSlide(false);
+  };
+
   return (
     <Layout title="Works">
       <div className={`${styles.works} wrapper`}>
@@ -40,6 +52,15 @@ const WorksList = () => {
                   screenshot={images[0]}
                   title="Edgar SJ Santos Hardware"
                   description="Sales and item tracker"
+                  onClick={() =>
+                    handleOpenSlide([
+                      "esjs/1.jpg",
+                      "esjs/2.jpg",
+                      "esjs/3.jpg",
+                      "esjs/4.jpg",
+                      "esjs/5.jpg",
+                    ])
+                  }
                 />
                 <Work
                   screenshot={images[1]}
@@ -60,10 +81,10 @@ const WorksList = () => {
               </div>
             </>
           ) : (
-              <Loader />
-
+            <Loader />
           )}
         </div>
+        {showSlide ? <Slide images={slideShowImages} onClose={() => handleCloseSlide()} /> : <></>}
       </div>
     </Layout>
   );

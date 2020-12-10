@@ -1,0 +1,7 @@
+.close-button {
+  &::before {
+    content: "x";
+    font-size: x-large;
+    cursor: pointer;
+  }
+}

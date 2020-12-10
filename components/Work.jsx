@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Work.module.scss";
 
-const Work = ({ screenshot, title, description, link }) => {
+const Work = ({ screenshot, title, description, link, onClick }) => {
   const work = (
-    <div className={styles.work}>
+    <div className={styles.work} onClick={onClick}>
       <div className={styles.workScreenshot}>
         <img src={screenshot} alt="" />
         <div className={styles.workOverlay}>

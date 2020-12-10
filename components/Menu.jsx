@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Link from 'next/link'
+import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import style from "./Menu.module.scss";
+import CloseButton from "./CloseButton";
 
 const Menu = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -14,13 +15,14 @@ const Menu = () => {
     { label: "Contact", link: "/contact" },
   ];
 
-  const menuClass = style.menu + (showSidebar ? ` ${style.menuShowSidebar}` : "");
+  const menuClass =
+    style.menu + (showSidebar ? ` ${style.menuShowSidebar}` : "");
   const menuLinkClass = (page) => {
-    const baseClass = style.menuLink
-    if(router.pathname === page.link) {
-      return baseClass + " " + style.menuLinkActive
+    const baseClass = style.menuLink;
+    if (router.pathname === page.link) {
+      return baseClass + " " + style.menuLinkActive;
     }
-    return baseClass
+    return baseClass;
   };
 
   const renderOverlay = () => {
@@ -33,7 +35,6 @@ const Menu = () => {
       );
     }
   };
-  
 
   return (
     <>
@@ -47,15 +48,13 @@ const Menu = () => {
 
       {renderOverlay()}
       <nav className={menuClass}>
-        <div className={style.menuClose} onClick={() => setShowSidebar(false)}></div>
+        <div className={style.menuClose}>
+          <CloseButton onClick={() => setShowSidebar(false)} />
+        </div>
         <ul className={style.menuList}>
           {pages.map((page, index) => (
             <li key={index} className={style.menuItem}>
-              <Link
-                href={page.link}
-                onClick={() => router.push(page.link)}
-                
-              >
+              <Link href={page.link} onClick={() => router.push(page.link)}>
                 <a className={menuLinkClass(page)}>{page.label}</a>
               </Link>
             </li>
