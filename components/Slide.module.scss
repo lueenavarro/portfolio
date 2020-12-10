@@ -16,15 +16,16 @@
   }
 
   &-arrow-container {
+    display: none;
     flex-basis: 2.8125rem;
     flex-shrink: 0;
   }
 
   &-arrow {
+    display: flex;
     align-items: center;
     height: 100%;
     cursor: pointer;
-    display: none;
 
     &::after {
       content: "";
@@ -82,8 +83,8 @@
 
 @media only screen and (min-width: 650px) {
   .slide {
-    &-arrow {
-      display: inline-flex;
+    &-arrow-container {
+      display: block;
     }
   }
 }
