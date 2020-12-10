@@ -1,3 +1,7 @@
+.swiper-pagination {
+  position: fixed;
+}
+
 .swiper-pagination-bullet {
   background-color: rgba(var(--color-white-rgb), 0.25);
   &-active {
