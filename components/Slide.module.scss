@@ -15,12 +15,16 @@
     z-index: 1000;
   }
 
+  &-arrow-container {
+    flex-basis: 2.8125rem;
+    flex-shrink: 0;
+  }
+
   &-arrow {
     align-items: center;
     height: 100%;
     cursor: pointer;
     display: none;
-    width: 1.5625rem;
 
     &::after {
       content: "";

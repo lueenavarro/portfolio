@@ -34,12 +34,16 @@ const Slide = ({ images, onClose }) => {
       <div className={styles.slideCloseButton}>
         <CloseButton onClick={onClose} />
       </div>
-      {swiperControl.position != "beginning" && (
-        <div
-          className={`${styles.slideArrow} ${styles.slideArrowLeft}`}
-          onClick={() => swiperInstance.slidePrev()}
-        ></div>
-      )}
+
+      <div className={styles.slideArrowContainer}>
+        {swiperControl.position != "beginning" && (
+          <div
+            className={`${styles.slideArrow} ${styles.slideArrowLeft}`}
+            onClick={() => swiperInstance.slidePrev()}
+          ></div>
+        )}
+      </div>
+
       <div className={styles.swiper}>
         <Swiper controller={{ control: swiperInstance }}> </Swiper>
         <Swiper
@@ -59,12 +63,15 @@ const Slide = ({ images, onClose }) => {
           ))}
         </Swiper>
       </div>
-      {swiperControl.position != "end" && (
-        <div
-          className={`${styles.slideArrow} ${styles.slideArrowRight}`}
-          onClick={() => swiperInstance.slideNext()}
-        ></div>
-      )}
+      
+      <div className={styles.slideArrowContainer}>
+        {swiperControl.position != "end" && (
+          <div
+            className={`${styles.slideArrow} ${styles.slideArrowRight}`}
+            onClick={() => swiperInstance.slideNext()}
+          ></div>
+        )}
+      </div>
     </div>
   );
 };
