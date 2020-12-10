@@ -1,5 +1,6 @@
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
+import "swiper/components/zoom/zoom.scss";
 
 import "../styles/colors.scss";
 import "../styles/globals.scss";

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./Slide.module.scss";
 import CloseButton from "./CloseButton";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Controller } from "swiper";
+import SwiperCore, { Controller, Navigation, Pagination, Zoom } from "swiper";
 
-SwiperCore.use([Navigation, Pagination, Controller]);
+SwiperCore.use([Controller, Navigation, Pagination, Zoom]);
 
 const Slide = ({ images, onClose }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -53,6 +53,7 @@ const Slide = ({ images, onClose }) => {
           centeredSlides={true}
           slidesPerView={1}
           spaceBetween={50}
+          zoom={true}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
@@ -63,7 +64,7 @@ const Slide = ({ images, onClose }) => {
           ))}
         </Swiper>
       </div>
-      
+
       <div className={styles.slideArrowContainer}>
         {swiperControl.position != "end" && (
           <div
