@@ -61,12 +61,14 @@ const WorksList = () => {
                       "esjs/5.jpg",
                     ])
                   }
+                  role="Front End Developer"
                 />
                 <Work
                   screenshot={images[1]}
                   title="Precious Finds"
                   description="E-commerce site proof of concept"
                   link="https://preciousfinds.netlify.app"
+                  role="Full Stack Developer"
                 />
               </div>
               <br />
@@ -84,7 +86,9 @@ const WorksList = () => {
             <Loader />
           )}
         </div>
-        {showSlide && <Slide images={slideShowImages} onClose={() => handleCloseSlide()} />}
+        {showSlide && (
+          <Slide images={slideShowImages} onClose={() => handleCloseSlide()} />
+        )}
       </div>
     </Layout>
   );
