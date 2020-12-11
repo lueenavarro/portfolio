@@ -20,7 +20,7 @@ const Menu = () => {
   const menuLinkClass = (page) => {
     const baseClass = style.menuLink;
     if (router.pathname === page.link) {
-      return baseClass + " " + style.menuLinkActive;
+      return baseClass + " " + style.menuLinkCurrent;
     }
     return baseClass;
   };
