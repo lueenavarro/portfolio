@@ -61,14 +61,14 @@ const WorksList = () => {
                       "esjs/5.jpg",
                     ])
                   }
-                  role="Front End Developer"
+                  role="Full Stack Developer"
                 />
                 <Work
                   screenshot={images[1]}
                   title="Precious Finds"
                   description="E-commerce site proof of concept"
                   link="https://preciousfinds.netlify.app"
-                  role="Full Stack Developer"
+                  role="Front End Developer"
                 />
               </div>
               <br />
