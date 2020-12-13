@@ -1,28 +1,58 @@
 import React, { useEffect, useState } from "react";
 import style from "./Typewriter.module.scss";
 
-const Typewriter = ({ message, speed = 200, pause = 3000 }) => {
+const Typewriter = ({
+  message,
+  typingSpeed = 200,
+  backspaceSpeed = 30,
+  pause = 3000,
+}) => {
   const [messageHolder, setMessageHolder] = useState("");
   const [counter, setCounter] = useState(0);
-  const [blink, setBlink] = useState(false);
+  const [blinking, setBlinking] = useState(false);
+  const [typing, setTyping] = useState(true);
+  const [speed, setSpeed] = useState(typingSpeed);
+
+  const messageEmpty = counter === 0;
+  const messageComplete = counter === message.length;
+
+  const moveCaret = (speed, condition, newMessage, newCounter, timeouts) => {
+    setSpeed(speed);
+    if (condition) {
+      setMessageHolder(newMessage);
+      setCounter(newCounter);
+    } else {
+      setBlinking(true);
+      timeouts.push(
+        setTimeout(() => {
+          setBlinking(false);
+          setTyping(!typing);
+        }, pause)
+      );
+    }
+  };
 
   useEffect(() => {
     const timeouts = [];
     timeouts.push(
       setTimeout(() => {
-        if (counter < message.length) {
-          setMessageHolder(messageHolder.concat(message[counter]));
-          setCounter(counter + 1);
-        } else {
-          setBlink(true);
-          timeouts.push(
-            setTimeout(() => {
-              setBlink(false);
-              setMessageHolder("");
-              setCounter(0);
-            }, pause)
+        if (typing) {
+          moveCaret(
+            typingSpeed,
+            !messageComplete,
+            messageHolder.concat(message[counter]),
+            counter + 1,
+            timeouts
           );
+          return;
         }
+        moveCaret(
+          backspaceSpeed,
+          !messageEmpty,
+          messageHolder.slice(0, -1),
+          counter - 1,
+          timeouts
+        );
       }, speed)
     );
     return () =>
@@ -31,10 +61,14 @@ const Typewriter = ({ message, speed = 200, pause = 3000 }) => {
       });
   });
 
+
+
   return (
     <h2 className={style.typewriter}>
       {messageHolder}
-      <span className={blink ? style.caret : null}>&nbsp;|</span>
+      <span className={blinking && style.caret}>
+        {!messageEmpty && <>&nbsp;</>}|
+      </span>
     </h2>
   );
 };
