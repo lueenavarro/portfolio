@@ -13,7 +13,8 @@
     }
 
     &--current {
-      color: var(--color-secondary);
+      padding-bottom: 0.1875rem;
+      border-bottom: 0.1875rem solid var(--color-secondary);
     }
   }
 }
