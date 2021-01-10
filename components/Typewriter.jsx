@@ -16,22 +16,6 @@ const Typewriter = ({
   const messageEmpty = counter === 0;
   const messageComplete = counter === message.length;
 
-  const moveCaret = (speed, condition, newMessage, newCounter, timeouts) => {
-    setSpeed(speed);
-    if (condition) {
-      setMessageHolder(newMessage);
-      setCounter(newCounter);
-    } else {
-      setBlinking(true);
-      timeouts.push(
-        setTimeout(() => {
-          setBlinking(false);
-          setTyping(!typing);
-        }, pause)
-      );
-    }
-  };
-
   useEffect(() => {
     const timeouts = [];
     timeouts.push(
@@ -61,12 +45,31 @@ const Typewriter = ({
       });
   });
 
+  const moveCaret = (speed, condition, newMessage, newCounter, timeouts) => {
+    setSpeed(speed);
+    if (condition) {
+      setMessageHolder(newMessage);
+      setCounter(newCounter);
+    } else {
+      setBlinking(true);
+      timeouts.push(
+        setTimeout(() => {
+          setBlinking(false);
+          setTyping(!typing);
+        }, pause)
+      );
+    }
+  };
 
+  const carretClass = ()=> {
+    return blinking ? style.caret : undefined;
+  }
+  
 
   return (
     <h2 className={style.typewriter}>
       {messageHolder}
-      <span className={blinking && style.caret}>
+      <span className={carretClass()}>
         {!messageEmpty && <>&nbsp;</>}|
       </span>
     </h2>

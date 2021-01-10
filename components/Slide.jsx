@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Slide.module.scss";
 import CloseButton from "./CloseButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Controller, Navigation, Pagination, Zoom } from "swiper";
+import {
+  clearAllBodyScrollLocks,
+  disableBodyScroll,
+  enableBodyScroll,
+} from "body-scroll-lock";
 
 SwiperCore.use([Controller, Navigation, Pagination, Zoom]);
 
 const Slide = ({ images, onClose }) => {
+  const targetElement = useRef(null);
+
+  useEffect(() => {
+    if (targetElement.current) {
+      disableBodyScroll(targetElement.current);
+    } else {
+      targetElement.current = document.getElementById("slideContainer");
+    }
+  });
+
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [swiperControl, setSwiperControls] = useState({
     activeIndex: 0,
@@ -29,10 +44,16 @@ const Slide = ({ images, onClose }) => {
     setSwiperControls({ activeIndex: slideIndex, position });
   };
 
+  const onThisComponentClose = () => {
+    enableBodyScroll(targetElement.current);
+    clearAllBodyScrollLocks();
+    onClose();
+  };
+
   return (
-    <div className={styles.slide}>
+    <div className={styles.slide} id="slideContainer">
       <div className={styles.slideCloseButton}>
-        <CloseButton onClick={onClose} />
+        <CloseButton onClick={onThisComponentClose} />
       </div>
 
       <div className={styles.slideArrowContainer}>

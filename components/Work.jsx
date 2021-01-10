@@ -21,7 +21,7 @@ const Work = ({
           <p className={styles.workTitle}>{title}</p>
         </div>
       </div>
-      <p className={styles.workDescription}>
+      <div className={styles.workDescription}>
         {description}
         {role && (
           <div className={styles.workRole}>
@@ -30,7 +30,7 @@ const Work = ({
             {role}
           </div>
         )}
-      </p>
+      </div>
       {link && (
         <div className={styles.linkOverlay}>
           <a href={link} target="_blank" className={styles.linkButton}>
