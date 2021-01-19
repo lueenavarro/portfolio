@@ -8,21 +8,21 @@
 
   &-section-title {
     display: inline-block;
-    border-bottom: 3px solid var(--color-secondary);
-    padding-bottom: 3px;
+    border-bottom: 0.1875rem solid var(--color-secondary);
+    padding-bottom: 0.1875rem;
   }
 
   &-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 0.625rem;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .works {
     &-list {
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(26.25rem, 1fr));
     }
   }
 }

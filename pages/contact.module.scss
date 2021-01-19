@@ -4,10 +4,10 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--color-darker-primary);
-    padding: 60px 0;
-    border-radius: 5px;
+    padding: 3.75rem 0;
+    border-radius: 0.3125rem;
     width: 85%;
-    max-width: 400px;
+    max-width: 25rem;
     position: relative;
     flex-shrink: 0;
   }
@@ -20,13 +20,13 @@
     bottom: 0;
     animation: glow 1s infinite alternate;
     transition: ease;
-    box-shadow: 0 0 10px 10px rgba(var(--color-secondary-rgb), 0.5);
-    border-radius: 5px;
+    box-shadow: 0 0 0.625rem 0.625rem rgba(var(--color-secondary-rgb), 0.5);
+    border-radius: 0.3125rem;
     z-index: -1;
   }
 
   &-item {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     display: inline-block;
   }
 
@@ -54,19 +54,19 @@
 
 .copy-icon {
   opacity: 0.5;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
   position: relative;
-  top: 3px;
+  top: 0.1875rem;
   cursor: pointer;
 }
 
 .copied {
   position: absolute;
   background-color: var(--color-darker-primary);
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
   animation: moveup 1s;
-  bottom: -80px;
+  bottom: -5rem;
   opacity: 0;
 
   &--hidden {
@@ -81,23 +81,23 @@
   }
 
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
     opacity: 0;
   }
 }
 
 .hvr-icon {
-  margin-right: 6px;
+  margin-right: 0.375rem;
   position: relative;
-  top: 3px;
+  top: 0.1875rem;
 }
 
 .hvr-icon-up {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px var(--color-darker-primary);
+  -webkit-transform: perspective(0.0625rem) translateZ(0);
+  transform: perspective(0.0625rem) translateZ(0);
+  box-shadow: 0 0 0.0625rem var(--color-darker-primary);
 }
 
 .hvr-icon-up .hvr-icon {
@@ -125,12 +125,13 @@
   }
   25%,
   75% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
+    -webkit-transform: translateY(-0.375rem);
+    transform: translateY(-0.375rem);
   }
 }
 
 .ph-flag {
-  margin-top: 5px;
-  width: 30px;
+  margin-top: 0.3125rem;
+  width: 1.875rem;
+  height: 1.75rem;
 }

@@ -4,15 +4,15 @@
     align-items: center;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    column-gap: 50px;
-    row-gap: 30px;
+    column-gap: 3.125rem;
+    row-gap: 1.875rem;
     width: 90%;
   }
 }
 
 .bio {
   width: 100%;
-  max-width: 350px;
+  max-width: 21.875rem;
 
   &-text {
     line-height: 1.5;
@@ -22,30 +22,30 @@
 
 .photo {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 12.5rem;
+  width: 12.5rem;
 
   &-img {
     width: 100%;
-    box-shadow: 10px 10px 0px -3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    box-shadow: 0.625rem 0.625rem 0rem -0.1875rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.3125rem;
   }
 
   &-blindfold {
     position: absolute;
-    height: 50px;
+    height: 3.125rem;
     transform: scaleX(1);
     width: 100%;
     transition: 0.8s;
     transform-origin: right;
 
     &--black {
-      top: 50px;
+      top: 3.125rem;
       background-color: var(--color-darker-primary);
     }
 
     &--red {
-      top: 98px;
+      top: 6.125rem;
       background-color: var(--color-secondary);
     }
   }
