@@ -4,7 +4,6 @@
   padding: 10px;
   box-sizing: border-box;
   border-radius: 5px;
-  position: relative;
 
   &:hover,
   &:active {
@@ -16,6 +15,16 @@
   &-link {
     color: var(--color-text);
     text-decoration: none;
+  }
+
+  &-screenshot {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   &-overlay {
@@ -32,16 +41,6 @@
     right: 0;
     background: linear-gradient(transparent 5%, var(--color-darker-primary));
     transition: opacity 0.2s;
-  }
-
-  &-screenshot {
-    width: 100%;
-    position: relative;
-    overflow: auto;
-
-    img {
-      width: 100%;
-    }
   }
 
   &-title {

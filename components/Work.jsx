@@ -3,14 +3,7 @@ import styles from "./Work.module.scss";
 import { FiExternalLink } from "react-icons/fi";
 import { BsPersonFill } from "react-icons/bs";
 
-const Work = ({
-  screenshot,
-  title,
-  description,
-  link,
-  onClick,
-  role,
-}) => {
+const Work = ({ screenshot, title, description, link, onClick, role }) => {
   const cursorStyle = { cursor: onClick ? "pointer" : "select" };
 
   return (
@@ -18,29 +11,32 @@ const Work = ({
       <div className={styles.workScreenshot}>
         <img src={screenshot} alt={title} />
         <div className={styles.workOverlay}>
-          <p className={styles.workTitle}>{title}</p>
+          {link && (
+            <div className={styles.linkOverlay}>
+              <a href={link} target="_blank" className={styles.linkButton}>
+                <span>Go to Site</span>{" "}
+                <div className={styles.linkIcon}>
+                  <FiExternalLink />
+                </div>
+              </a>
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.workDescription}>
+        <p className={styles.workTitle}>{title}</p>
+
         {description}
         {role && (
           <div className={styles.workRole}>
-            <div className={styles.workRoleIcon}><BsPersonFill /></div>
-            
+            <div className={styles.workRoleIcon}>
+              <BsPersonFill />
+            </div>
+
             {role}
           </div>
         )}
       </div>
-      {link && (
-        <div className={styles.linkOverlay}>
-          <a href={link} target="_blank" className={styles.linkButton}>
-            <span>Go to Site</span>{" "}
-            <div className={styles.linkIcon}>
-              <FiExternalLink />
-            </div>
-          </a>
-        </div>
-      )}
     </div>
   );
 };
