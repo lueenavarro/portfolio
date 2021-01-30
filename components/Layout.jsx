@@ -18,7 +18,7 @@ function Layout({ children, title: componentTitle }) {
         <title>{title()}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Louie Navarro's Portfolio" />
+        <meta name="description" content="Louie Navarro, Full Stack Developer, Philippines" />
       </Head>
       <Menu />
       <div className={styles.container}>{children}</div>
