@@ -5,7 +5,7 @@ import styles from "./Layout.module.scss";
 
 function Layout({ children, title: componentTitle }) {
   const title = () => {
-    const baseTitle = "Louie";
+    const baseTitle = "Louie Navarro";
     if (componentTitle) {
       return `${baseTitle} - ${componentTitle}`;
     }
