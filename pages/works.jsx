@@ -14,7 +14,7 @@ const WorksList = () => {
     "/screenshots/esjs-hardware.jpg",
     "/screenshots/precious-finds.jpg",
     "/screenshots/covid-ph-stats.jpg",
-    "/screenshots/onestep.jpg"
+    "/screenshots/onestep.jpg",
   ];
 
   useEffect(() => {
@@ -86,6 +86,16 @@ const WorksList = () => {
                   title="[WIP] Onestep"
                   description="Another task management application"
                   link="https://onestep-client.herokuapp.com/"
+                  repos={[
+                    {
+                      title: "Client",
+                      link: "https://github.com/lueenavarro/onestep-client",
+                    },
+                    {
+                      title: "API",
+                      link: "https://github.com/lueenavarro/onestep-api",
+                    },
+                  ]}
                 />
               </div>
             </>
