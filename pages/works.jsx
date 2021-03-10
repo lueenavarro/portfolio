@@ -85,8 +85,8 @@ const WorksList = () => {
               <div className={styles.worksList}>
                 <Work
                   screenshot={images[3]}
-                  title="Onestep"
-                  description="[UNDER CONSTRUCTION] Another task management application"
+                  title="[WIP] Onestep"
+                  description="Another task management application"
                   link="https://onestep-client.herokuapp.com/"
                 />
               </div>
