@@ -14,6 +14,7 @@ const WorksList = () => {
     "/screenshots/esjs-hardware.jpg",
     "/screenshots/precious-finds.jpg",
     "/screenshots/covid-ph-stats.jpg",
+    "/screenshots/onestep.jpg"
   ];
 
   useEffect(() => {
@@ -79,6 +80,14 @@ const WorksList = () => {
                   title="Covid PH Tracker"
                   description="Tracks covid cases per region. Data is webscraped daily from Wikipedia using AWS Lambda, S3 and API Gateway."
                   link="https://covid-ph-stats.netlify.app"
+                />
+              </div>
+              <div className={styles.worksList}>
+                <Work
+                  screenshot={images[3]}
+                  title="Onestep"
+                  description="[UNDER CONSTRUCTION] Another task management application"
+                  link="https://onestep-client.herokuapp.com/"
                 />
               </div>
             </>
