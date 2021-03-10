@@ -81,8 +81,6 @@ const WorksList = () => {
                   description="Tracks covid cases per region. Data is webscraped daily from Wikipedia using AWS Lambda, S3 and API Gateway."
                   link="https://covid-ph-stats.netlify.app"
                 />
-              </div>
-              <div className={styles.worksList}>
                 <Work
                   screenshot={images[3]}
                   title="[WIP] Onestep"
