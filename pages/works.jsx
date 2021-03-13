@@ -85,7 +85,7 @@ const WorksList = () => {
                   screenshot={images[3]}
                   title="[In Progress] Onestep"
                   description="Another task management application"
-                  link="https://onestep-client.herokuapp.com/"
+                  link="https://onestep-client.netlify.app/"
                   repos={[
                     {
                       title: "Client",
