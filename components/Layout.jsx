@@ -3,19 +3,11 @@ import Head from "next/head";
 import Menu from "./Menu";
 import styles from "./Layout.module.scss";
 
-function Layout({ children, title: componentTitle }) {
-  const title = () => {
-    const baseTitle = "Louie Navarro";
-    if (componentTitle) {
-      return `${baseTitle} - ${componentTitle}`;
-    }
-    return baseTitle;
-  };
-
+function Layout({ children }) {
   return (
     <div className={styles.app}>
       <Head>
-        <title>{title()}</title>
+        <title>Louie Navarro - A Fullstack Developer</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Louie Navarro, Full Stack Developer, Philippines" />

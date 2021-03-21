@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout title="Contact">
+    <Layout>
     <div className="contact wrapper">
       
       <div className={styles.contactContainer}>
@@ -58,7 +58,7 @@ const Contact = () => {
           `mailto:${email}`,
           <AiOutlineMail className={styles.hvrIcon} />
         )}
-        <img src="ph-flag.png" className={styles.phFlag} alt=""/>
+        <img src="ph-flag.png" className={styles.phFlag} alt="Philippines"/>
         <div className={copiedClass()}>copied!</div>
       </div>
 

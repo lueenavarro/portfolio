@@ -5,7 +5,7 @@ import styles from "./skills.module.scss";
 
 const SkillsList = () => {
   return (
-    <Layout title="Skills">
+    <Layout>
       <div className={`${styles.skills} wrapper`}>
         <div className={styles.skillsContainer}>
           <Skill skill="JavaScript" rating={5} />

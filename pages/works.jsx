@@ -42,7 +42,7 @@ const WorksList = () => {
   };
 
   return (
-    <Layout title="Works">
+    <Layout>
       <div className={`${styles.works} wrapper`}>
         <div className={styles.worksContainer}>
           {imgsLoaded ? (
