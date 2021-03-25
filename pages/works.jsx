@@ -47,7 +47,7 @@ const WorksList = () => {
         <div className={styles.worksContainer}>
           {imgsLoaded ? (
             <>
-              <h3 className={styles.worksSectionTitle}>Freelance</h3>
+              <h3 className={styles.worksSectionTitle}>Projects</h3>
               <div className={styles.worksList}>
                 <Work
                   screenshot={images[0]}
