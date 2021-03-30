@@ -11,7 +11,7 @@ const Home = () => {
         <div className={styles.bio}>
           <Typewriter message="I'm Louie. I'm a developer." />
           <p className={styles.bioText}>
-            I'm a fullstack developer by morning and evening. Hire me and I will take
+            I'm a full stack developer by morning and evening. Hire me and I will take
             care of your app from development to deployment.
           </p>
         </div>
