@@ -13,10 +13,28 @@
 .bio {
   width: 100%;
   max-width: 21.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &-text {
     line-height: 1.5;
     font-family: "Rubik", sans-serif;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &-links {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 25px);
+    justify-content: center;
+    grid-gap: 1rem;
+
+     img {
+       width: 100%;
+       filter: grayscale(1)
+     }
   }
 }
 
