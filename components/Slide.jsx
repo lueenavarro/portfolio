@@ -12,15 +12,21 @@ import {
 SwiperCore.use([Controller, Navigation, Pagination, Zoom]);
 
 const Slide = ({ images, onClose }) => {
-  const targetElement = useRef(null);
+  const slideContainer = useRef(null);
 
   useEffect(() => {
-    if (targetElement.current) {
-      disableBodyScroll(targetElement.current);
-    } else {
-      targetElement.current = document.getElementById("slideContainer");
-    }
-  });
+    disableBodyScroll(slideContainer.current);
+  }, []);
+
+  useEffect(() => {
+    const escFunc = (event) => {
+      const escapeKeyCode = 27;
+      if (event.keyCode === escapeKeyCode) onThisComponentClose();
+    };
+
+    document.addEventListener("keydown", escFunc, false);
+    return () => document.removeEventListener("keydown", escFunc, false);
+  }, []);
 
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [swiperControl, setSwiperControls] = useState({
@@ -45,13 +51,13 @@ const Slide = ({ images, onClose }) => {
   };
 
   const onThisComponentClose = () => {
-    enableBodyScroll(targetElement.current);
+    enableBodyScroll(slideContainer.current);
     clearAllBodyScrollLocks();
     onClose();
   };
 
   return (
-    <div className={styles.slide} id="slideContainer">
+    <div className={styles.slide} ref={slideContainer}>
       <div className={styles.slideCloseButton}>
         <CloseButton onClick={onThisComponentClose} />
       </div>
