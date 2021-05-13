@@ -1,3 +1,15 @@
 [build]
   command = "npm run build && npm run export"
   publish = "out"
+
+[[redirects]]
+  from = "https://louienavarro.ml"
+  to = "https://louienavarro.me"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louienavarro.ml"
+  to = "https://www.louienavarro.me"
+  status = 301
+  force = true
