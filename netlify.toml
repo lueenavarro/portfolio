@@ -13,3 +13,9 @@
   to = "https://www.louienavarro.me"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://louienavarro.netlify.app"
+  to = "https://louienavarro.me"
+  status = 301
+  force = true
