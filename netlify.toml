@@ -3,19 +3,19 @@
   publish = "out"
 
 [[redirects]]
-  from = "https://louienavarro.ml"
-  to = "https://louienavarro.me"
+  from = "https://louienavarro.ml/*"
+  to = "https://www.louienavarro.me/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.louienavarro.ml"
-  to = "https://www.louienavarro.me"
+  from = "https://www.louienavarro.ml/*"
+  to = "https://www.louienavarro.me/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://louienavarro.netlify.app"
-  to = "https://louienavarro.me"
+  from = "https://louienavarro.netlify.app/*"
+  to = "https://www.louienavarro.me/:splat"
   status = 301
   force = true
