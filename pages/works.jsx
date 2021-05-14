@@ -89,11 +89,11 @@ const WorksList = () => {
                   repos={[
                     {
                       title: "Client",
-                      link: "https://github.com/lueenavarro/onestep-client",
+                      link: "https://github.com/lueenavarro/gawain-client",
                     },
                     {
                       title: "API",
-                      link: "https://github.com/lueenavarro/onestep-api",
+                      link: "https://github.com/lueenavarro/gawain-api",
                     },
                   ]}
                 />
