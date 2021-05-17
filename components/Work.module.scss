@@ -1,7 +1,5 @@
 .work {
   animation: slide-down 1s;
-  background-color: var(--color-darker-primary);
-  padding: 0.9375rem;
   box-sizing: border-box;
   border-radius: 0.3125rem;
 
@@ -16,7 +14,7 @@
     }
 
     .work-screenshot-img {
-      transform: scale(1.02);
+      transform: scale(1.05);
       transform-origin: center;
     }
   }
@@ -26,6 +24,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 0.3125rem;
+    box-shadow: 0 10px 10px -10px black;
   }
 
   &-screenshot-img {
@@ -50,12 +49,19 @@
   }
 
   &-title {
+    margin-top: 0;
     font-weight: bold;
   }
 
   &-description {
     line-height: 1.5;
-    margin-bottom: 0.3125rem;
+    margin: 0 auto 0.3125rem auto;
+    padding: 20px;
+    background-color: var(--color-darker-primary);
+    overflow: auto;
+    max-width: 97%;
+    border-radius: 0 0 0.3125rem 0.3125rem;
+    box-sizing: border-box;
   }
 
   &-tags {
@@ -83,7 +89,6 @@
   text-decoration: none;
   cursor: pointer;
   background-color: rgba(var(--color-secondary-rgb), 0.5);
-  transition: all 0.2s linear;
   transform: scale(0);
 
   &-icon {
