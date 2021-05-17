@@ -21,14 +21,12 @@ const Work = ({
         <img src={screenshot} alt={title} />
         <div className={styles.workOverlay}>
           {link && (
-            <div className={styles.linkOverlay}>
-              <a href={link} target="_blank" className={styles.linkButton}>
-                <span>Go to Site</span>{" "}
-                <div className={styles.linkIcon}>
-                  <FiExternalLink />
-                </div>
-              </a>
-            </div>
+            <a href={link} target="_blank" className={styles.link}>
+              <span>Go to Site</span>{" "}
+              <div className={styles.linkIcon}>
+                <FiExternalLink />
+              </div>
+            </a>
           )}
         </div>
       </div>
@@ -52,7 +50,12 @@ const Work = ({
             </div>
 
             {repos.map((repo, index) => (
-              <a href={repo.link} key={index} className={styles.repo} target="_blank">
+              <a
+                href={repo.link}
+                key={index}
+                className={styles.repo}
+                target="_blank"
+              >
                 {repo.title}
               </a>
             ))}
