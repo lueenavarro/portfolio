@@ -83,17 +83,17 @@ const WorksList = () => {
                 />
                 <Work
                   screenshot={images[3]}
-                  title="[In Progress] Onestep"
+                  title="Gawain"
                   description="Another task management application"
-                  link="https://onestep-client.netlify.app/"
+                  link="https://gawain.ml/"
                   repos={[
                     {
                       title: "Client",
-                      link: "https://github.com/lueenavarro/onestep-client",
+                      link: "https://github.com/lueenavarro/gawain-client",
                     },
                     {
                       title: "API",
-                      link: "https://github.com/lueenavarro/onestep-api",
+                      link: "https://github.com/lueenavarro/gawain-api",
                     },
                   ]}
                 />
