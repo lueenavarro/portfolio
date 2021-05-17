@@ -18,7 +18,7 @@ const Work = ({
   return (
     <div className={styles.work} onClick={onClick} style={cursorStyle}>
       <div className={styles.workScreenshot}>
-        <img src={screenshot} alt={title} />
+        <img className={styles.workScreenshotImg} src={screenshot} alt={title} />
         <div className={styles.workOverlay}>
           {link && (
             <a href={link} target="_blank" className={styles.link}>
