@@ -14,7 +14,7 @@ const WorksList = () => {
     "/screenshots/esjs-hardware.jpg",
     "/screenshots/precious-finds.jpg",
     "/screenshots/covid-ph-stats.jpg",
-    "/screenshots/onestep.jpg",
+    "/screenshots/gawain.jpg",
   ];
 
   useEffect(() => {
