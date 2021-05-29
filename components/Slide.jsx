@@ -2,14 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Slide.module.scss";
 import CloseButton from "./CloseButton";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Controller, Navigation, Pagination, Zoom } from "swiper";
+import SwiperCore, {
+  Controller,
+  Keyboard,
+  Navigation,
+  Pagination,
+  Zoom,
+} from "swiper";
 import {
   clearAllBodyScrollLocks,
   disableBodyScroll,
   enableBodyScroll,
 } from "body-scroll-lock";
 
-SwiperCore.use([Controller, Navigation, Pagination, Zoom]);
+SwiperCore.use([Controller, Keyboard, Navigation, Pagination, Zoom]);
 
 const Slide = ({ images, onClose }) => {
   const slideContainer = useRef(null);
@@ -76,11 +82,12 @@ const Slide = ({ images, onClose }) => {
         <Swiper
           onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
-          pagination
           centeredSlides={true}
           slidesPerView={1}
           spaceBetween={50}
-          zoom={true}
+          keyboard
+          pagination
+          zoom
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

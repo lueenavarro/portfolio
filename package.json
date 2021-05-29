@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
-    "next": "10.0.3",
+    "next": "^10.2.3",
     "react": "17.0.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
     "sass": "^1.30.0",
-    "swiper": "^6.4.1"
+    "swiper": "^6.6.2"
   }
 }
