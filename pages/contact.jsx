@@ -49,11 +49,6 @@ const Contact = () => {
       <div className={styles.contactContainer}>
         <div className={styles.contactGlow}>       </div>
         {contactItem(
-          mobile,
-          `viber://chat?number=${encodeURI(mobile)}`,
-          <FaViber className={styles.hvrIcon} />
-        )}
-        {contactItem(
           email,
           `mailto:${email}`,
           <AiOutlineMail className={styles.hvrIcon} />
