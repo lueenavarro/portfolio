@@ -77,6 +77,12 @@ const WorksList = () => {
               <div className={styles.worksList}>
                 <Work
                   screenshot={images[2]}
+                  title='Spin the Wheel'
+                  description='A spin wheel'
+                  link='https://spinthewheel.louienavarro.me/'
+                />
+                <Work
+                  screenshot={images[2]}
                   title='Covid PH Tracker'
                   description='Tracks covid cases per region. Data is webscraped daily from Wikipedia using AWS Lambda, S3 and API Gateway.'
                   link='https://covid-ph-stats.netlify.app'
