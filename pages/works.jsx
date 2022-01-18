@@ -79,7 +79,7 @@ const WorksList = () => {
                 <Work
                   screenshot={images[4]}
                   title='Spin the Wheel'
-                  description='A spin wheel'
+                  description='A spin wheel for anything under the sun'
                   link='https://spinthewheel.louienavarro.me/'
                 />
                 <Work
