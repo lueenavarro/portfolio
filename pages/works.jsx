@@ -15,6 +15,7 @@ const WorksList = () => {
     '/screenshots/precious-finds.jpg',
     '/screenshots/covid-ph-stats.jpg',
     '/screenshots/gawain.jpg',
+    '/screenshots/spinthewheel.jpg',
   ];
 
   useEffect(() => {
@@ -76,7 +77,7 @@ const WorksList = () => {
               <h3 className={styles.worksSectionTitle}>Playgrounds</h3>
               <div className={styles.worksList}>
                 <Work
-                  screenshot={images[2]}
+                  screenshot={images[4]}
                   title='Spin the Wheel'
                   description='A spin wheel'
                   link='https://spinthewheel.louienavarro.me/'
