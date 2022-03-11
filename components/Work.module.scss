@@ -16,6 +16,7 @@
     .work-screenshot-img {
       transform: scale(1.05);
       transform-origin: center;
+      filter: grayscale(0);
     }
   }
 
@@ -28,9 +29,10 @@
   }
 
   &-screenshot-img {
-      display: block;
-      width: 100%;
-      transition: transform 0.2s linear;
+    display: block;
+    width: 100%;
+    transition: transform 0.2s linear, filter 0.2s linear;
+    filter: grayscale(100%);
   }
 
   &-overlay {
@@ -44,7 +46,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color: rgba(var(--color-black-rgb), 0.5);
+    background-color: rgba(var(--color-black-rgb), 0.2);
     transition: background-color 0.2s linear;
   }
 
