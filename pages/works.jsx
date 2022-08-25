@@ -13,9 +13,8 @@ const WorksList = () => {
   const images = [
     '/screenshots/esjs-hardware.jpg',
     '/screenshots/precious-finds.jpg',
-    '/screenshots/covid-ph-stats.jpg',
-    '/screenshots/gawain.jpg',
     '/screenshots/spinthewheel.jpg',
+    '/screenshots/bank.jpg',
   ];
 
   useEffect(() => {
@@ -66,6 +65,15 @@ const WorksList = () => {
                   role='Full Stack Developer'
                 />
                 <Work
+                  screenshot={images[3]}
+                  title=''
+                  description='Bank transfer platform used by remittance centers'
+                  onClick={() =>
+                    handleOpenSlide([images[3], 'bank/2.jpg', 'bank/1.jpg'])
+                  }
+                  role='Full Stack Developer'
+                />
+                <Work
                   screenshot={images[1]}
                   title='Precious Finds'
                   description='E-commerce site proof of concept'
@@ -77,32 +85,10 @@ const WorksList = () => {
               <h3 className={styles.worksSectionTitle}>Playgrounds</h3>
               <div className={styles.worksList}>
                 <Work
-                  screenshot={images[4]}
+                  screenshot={images[2]}
                   title='Spin the Wheel'
                   description='A spin wheel for anything under the sun'
                   link='https://spinthewheel.louienavarro.me/'
-                />
-                <Work
-                  screenshot={images[2]}
-                  title='Covid PH Tracker'
-                  description='Tracks covid cases per region. Data is webscraped daily from Wikipedia using AWS Lambda, S3 and API Gateway.'
-                  link='https://covid-ph-stats.netlify.app'
-                />
-                <Work
-                  screenshot={images[3]}
-                  title='Gawain'
-                  description='Another task management application'
-                  link='https://gawain.louienavarro.me/'
-                  repos={[
-                    {
-                      title: 'Client',
-                      link: 'https://github.com/lueenavarro/gawain-client',
-                    },
-                    {
-                      title: 'API',
-                      link: 'https://github.com/lueenavarro/gawain-api',
-                    },
-                  ]}
                 />
               </div>
             </>
